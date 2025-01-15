@@ -1,10 +1,10 @@
 const express = require("express")
 const router = require("../src/routers/router")
-const handlebarsConfig = require("../src/dependencies/handlebarsConfig")
+const configs = require("../src/configs/configs")
 const app = express()
 
 app.use(router)
-handlebarsConfig(app)
+configs.handlebarsConfig(app)
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
