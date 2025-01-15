@@ -7,6 +7,6 @@ router.get("/home", (req, res) => {
 })
 
 router.get("/form", (req, res) => {
-    res.render("formulario")
+    res.render("form")
 })
 module.exports = router
