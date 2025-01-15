@@ -3,10 +3,10 @@ const router = require("../src/routers/router")
 const configs = require("../src/configs/configs")
 const app = express()
 
-app.use(router)
+// configurações
 configs.handlebarsConfig(app)
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+configs.bodyparserConfig(app)
+app.use(router)
 
 
 app.listen(3000, () => {
