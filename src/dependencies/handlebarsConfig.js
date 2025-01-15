@@ -5,9 +5,8 @@ function handlebarsConfig(app) {
     app.engine(
         "handlebars",
         engine({
-            defaultLayout: "main",
+            defaultLayout: "main", // Nome do layout principal
             layoutsDir: path.join(__dirname, "../views/layouts"), // Caminho para layouts
-            partialsDir: path.join(__dirname, "../views/partials"), // Caso use partials
         })
     );
     app.set("view engine", "handlebars");
