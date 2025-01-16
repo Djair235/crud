@@ -1,8 +1,11 @@
 const express = require("express")
-const configs = require("../dependencies/bodyparserConfig")
+const getModel = require("../models/getModel")
+const postModel = require("../models/postModel")
+
 const router = express.Router()
 const app = express()
 
+// rotas
 router.get("/home", (req, res) => {
     res.send("Router está funcionando!")
 })
@@ -11,8 +14,8 @@ router.get("/form", (req, res) => {
     res.render("formulario")
 })
 
-router.post("/rotaFinal", (req, res) => {
-    res.send(`FORMULÁRIO deu certo! ${req.body.nome} - ${req.body.idade}`)
-})
+router.post("/rotaFinal", postModel.postAll)
+
+router.get("/rotadb", getModel.getAll)
 
 module.exports = router

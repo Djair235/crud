@@ -8,7 +8,6 @@ configs.handlebarsConfig(app)
 configs.bodyparserConfig(app)
 app.use(router)
 
-
 app.listen(3000, () => {
     console.log("Servidor ONLINE na porta 3000")
 })
